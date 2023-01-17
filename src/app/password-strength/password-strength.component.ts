@@ -16,7 +16,7 @@ export class PasswordStrengthComponent {
   msgColor: string;
   msg = '';
 
-private colors = ['darkred','yellow', 'yellowgreen' ];
+private colors = ['red','yellow', 'yellowgreen' ];
     
 checkStrength(p) {
   let force = 0;
