@@ -47,7 +47,8 @@ return force
 ngOnChanges(changes: { [propName: string]: SimpleChange }): void {
     const password = changes.passwordToCheck.currentValue;
     this.setBarColors(3, '#DDD');
-    (password < 1 ) ? this.setBarColors(3, '#DDD') : this.setBarColors(3, 'red') ;
+    (password.length < 1 )?this.setBarColors(3, '#DDD')  : this.setBarColors(3, 'red');
+    (password.length > 8 )?this.setBarColors(3, '#DDD')  : this.setBarColors(0, 'red');
     if (password) {
     const c = this.getColor(this.checkStrength(password));
     this.setBarColors(c.index, c.color);
